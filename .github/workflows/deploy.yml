@@ -33,7 +33,7 @@ jobs:
               
               "npm install",
               "pm2 delete shipfast || true",
-              "pm2 start /var/www/shipfasts/app.js --name shipfast" --update-env",
+              "pm2 start /var/www/shipfasts/app.js --name shipfast --update-env",
               "pm2 save",
               "sudo systemctl reload nginx"
             ]'
