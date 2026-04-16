@@ -27,10 +27,10 @@ jobs:
               "if [ ! -d /var/www/shipfasts/.git ]; then rm -rf /var/www/shipfasts/* && git clone https://github.com/'"${{ github.repository }}"' /var/www/shipfasts; fi",
               "cd /var/www/shipfasts",
               
-              "git fetch --all",
-              "git reset --hard origin/main",
+              "git -C /var/www/shipfasts fetch --all",
+              "git -C /var/www/shipfasts reset --hard origin/main",
               
-              "npm install",
+              "npm --prefix /var/www/shipfasts install",
               "pm2 delete shipfast || true",
               "pm2 start /var/www/shipfasts/app.js --name shipfast --update-env",
               "pm2 save",
