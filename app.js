@@ -1,7 +1,7 @@
 const express = require('express'); 
 const app = express(); 
 app.get('/', (req, res) => { 
-  res.send('ShipFast deployed via CI/CD using SSM by Horacio F ✅'); 
+  res.send('ShipFast deployed via CI/CD using SSM by Horacio From München ✅'); 
 }); 
 app.get('/health', (req, res) => { 
   res.status(200).send('OK'); 
