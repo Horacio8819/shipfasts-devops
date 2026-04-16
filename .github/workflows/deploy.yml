@@ -24,7 +24,6 @@ jobs:
             --comment "ShipFast deploy" \
             --parameters 'commands=[
               "set -e",
-              "sudo git config --system --add safe.directory /var/www/shipfasts",
               "if [ ! -d /var/www/shipfasts/.git ]; then rm -rf /var/www/shipfasts/* && git clone https://github.com/'"${{ github.repository }}"' /var/www/shipfasts; fi",
               "cd /var/www/shipfasts",
               
